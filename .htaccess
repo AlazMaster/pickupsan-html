@@ -1,0 +1,31 @@
+# Pickupsan - sunucu ayarları (Apache / cPanel hosting için)
+ErrorDocument 404 /404.html
+DirectoryIndex index.html
+
+# Siteyi her zaman https:// ile aç
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Eski sitedeki adresleri yeni sayfalara yönlendir (Google sıralaması korunur)
+RedirectMatch 301 ^/index$ /
+RedirectMatch 301 ^/pickupsan-pcs-q-serisi/?$ /pcs-q-panelvan.html
+RedirectMatch 301 ^/pickupsan-pcs-c-serisi/?$ /pcs-c-camli.html
+RedirectMatch 301 ^/pickupsan-pcs-k-serisi/?$ /pcs-k-dolapli.html
+RedirectMatch 301 ^/pickupsan-vizyon/?$ /hakkimizda.html#vizyon
+RedirectMatch 301 ^/pickupsan-misyon/?$ /hakkimizda.html#misyon
+RedirectMatch 301 ^/hakkimizda/?$ /hakkimizda.html
+RedirectMatch 301 ^/iletisim/?$ /iletisim.html
+RedirectMatch 301 ^/foto-galeri/?$ /galeri.html
+RedirectMatch 301 ^/video-galeri/?$ /galeri.html
+
+# Tarayıcı önbelleği (site daha hızlı açılır)
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css "access plus 7 days"
+  ExpiresByType application/javascript "access plus 7 days"
+  ExpiresByType image/svg+xml "access plus 30 days"
+  ExpiresByType image/webp "access plus 30 days"
+  ExpiresByType image/jpeg "access plus 30 days"
+  ExpiresByType image/png "access plus 30 days"
+</IfModule>

@@ -1,0 +1,70 @@
+PICKUPSAN WEB SİTESİ - KISA KULLANIM REHBERİ
+=============================================
+
+1) BİLGİSAYARDA AÇMAK
+   index.html dosyasına çift tıklayın. Site tarayıcıda açılır.
+   Kurulum gerekmez. (Sadece Google Harita için internet gerekir.)
+
+
+2) DÜZENLEMEK
+   .html dosyalarını Not Defteri ile açabilirsiniz. Daha rahatı için ücretsiz
+   "Visual Studio Code" programını öneririm (bilgisayarınızda kurulu görünüyor).
+
+   Dosyalar:
+     index.html                 Ana sayfa
+     kabinler.html              Tüm kabinler + karşılaştırma tablosu
+     pcs-q-panelvan.html        PCS-Q detay sayfası
+     pcs-c-camli.html           PCS-C detay sayfası
+     pcs-k-dolapli.html         PCS-K detay sayfası
+     araclar.html               Araç listesi
+     galeri.html                Foto galeri
+     xxx-kabin.html             Her araç modeli için sayfa (ör. toyota-hilux-kabin.html)
+     teklif.html                Teklif formu
+     iletisim.html              İletişim + harita
+     hakkimizda.html            Kurumsal
+     404.html                   "Sayfa bulunamadı" sayfası
+     css/style.css              Tüm tasarım (renkler en üstte, :root bölümünde)
+     js/main.js                 Menü, araç bulucu ve teklif formu
+     images/                    Görseller
+     fonts/                     Yazı tipleri (silmeyin)
+
+   DİKKAT: Üst menü ve alt bilgi (telefon, adres vb.) her sayfada tekrar ediyor.
+   Telefon veya adres değişirse tüm .html dosyalarında değiştirmeniz gerekir.
+   VS Code'da Ctrl+Shift+H ("Tüm dosyalarda değiştir") ile tek seferde yapılır.
+
+   Teklif formundaki WhatsApp numarası ve e-posta: js/main.js dosyasının en üstünde.
+
+
+3) YAPILACAKLAR (içerik)
+   [ ] Fotoğraflar mevcut pickupsan.com'dan alındı ve küçültüldü (images/ klasörü).
+       Yeni fotoğraf eklemek için: aynı adla images/ klasörüne koyun.
+       Yüklemeden önce küçültün (genişlik ~1600 px, .webp). Ücretsiz araç: https://squoosh.app
+   [ ] "Bilgi eklenecek" yazan teknik özellikleri doldurun
+       (ürün sayfalarındaki tablo + index.html ve kabinler.html'deki karşılaştırma tablosu).
+   [ ] Sosyal medya linkleri şu an sadece instagram.com vb. ana sayfalara gidiyor;
+       kendi hesap adreslerinizi yazın (her sayfanın en altında).
+   [ ] Uyumlu araç listesini kontrol edin (her serinin her araca uyduğu varsayıldı).
+
+
+4) HOSTING'E YÜKLEMEK
+   Hosting panelinize girin (genelde cPanel, Plesk veya DirectAdmin olur).
+   "Dosya Yöneticisi" (File Manager) bölümünü açın ve "public_html" (veya
+   "httpdocs" / "www") klasörüne girin.
+
+   Bu klasördeki HER ŞEYİ oraya yükleyin. OKU-BENI.txt'yi yüklemeniz gerekmez.
+   - Klasör yapısını bozmayın: css, js, images klasörleri de aynen gitmeli.
+   - En kolayı: tüm dosyaları seçip ZIP yapın, ZIP'i yükleyin,
+     panelde "Extract / Ayıkla" deyin.
+   - .htaccess dosyası gizli görünebilir; onu da yükleyin. Bu dosya eski site
+     adreslerini yeni sayfalara yönlendirir ve siteyi https ile açar.
+
+   Yüklemeden önce eski sitenin yedeğini alın (public_html'i ZIP'leyip indirin).
+
+   Not: .htaccess, Apache kullanan hostinglerde çalışır (Türkiye'deki
+   hostinglerin çoğu böyledir). Yükledikten sonra site açılmaz ve
+   "500 hatası" verirse .htaccess'i silin ve bana haber verin.
+
+
+5) YÜKLEDİKTEN SONRA
+   - Google Search Console'a siteyi ekleyin ve sitemap.xml adresini gönderin.
+   - Google İşletme Profili'ne web sitesi adresini yazın.
