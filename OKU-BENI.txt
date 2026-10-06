@@ -75,3 +75,8 @@ GALERİ — MARKA / MODEL FOTOĞRAFLARI
 - Yeni fotoğraf: sıradaki numarayla iki dosyayı koyun (ör. 25.webp, 25-k.webp),
   galeri.html'de o kartın data-n="24" değerini bir artırın.
 - Doğrudan bağlantı: galeri.html#toyota-hilux gibi.
+
+GÜNCELLEME GÖRÜNMÜYORSA
+- Tarayıcılar css/js dosyalarını hafızada tutar. style.css veya main.js'i değiştirince
+  tüm .html dosyalarında "?v=2" yazan yerleri bir artırın (ör. ?v=3). Ziyaretçiler
+  yeni hali hemen görür.
