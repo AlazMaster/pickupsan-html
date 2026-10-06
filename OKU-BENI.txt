@@ -68,3 +68,10 @@ PICKUPSAN WEB SİTESİ - KISA KULLANIM REHBERİ
 5) YÜKLEDİKTEN SONRA
    - Google Search Console'a siteyi ekleyin ve sitemap.xml adresini gönderin.
    - Google İşletme Profili'ne web sitesi adresini yazın.
+
+GALERİ — MARKA / MODEL FOTOĞRAFLARI
+- galeri.html'de her model bir kart; tıklayınca o modelin fotoğrafları açılır.
+- Fotoğraflar: images/modeller/<model>/01.webp (büyük) ve 01-k.webp (küçük).
+- Yeni fotoğraf: sıradaki numarayla iki dosyayı koyun (ör. 25.webp, 25-k.webp),
+  galeri.html'de o kartın data-n="24" değerini bir artırın.
+- Doğrudan bağlantı: galeri.html#toyota-hilux gibi.
