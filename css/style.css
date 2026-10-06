@@ -429,3 +429,9 @@ a.info-item:hover { border-color: var(--brand); }
   .mfilter::-webkit-scrollbar { display: none; }
   .mfilter .chip { flex: none; padding: 10px 18px; }
 }
+/* marka düğmeleri tek sırada */
+.mfilter { flex-wrap: nowrap; gap: 8px; overflow-x: auto; scrollbar-width: none; padding-bottom: 4px; }
+.mfilter::-webkit-scrollbar { display: none; }
+.mfilter .chip { flex: 1 0 auto; text-align: center; padding: 11px 14px; font-size: .9rem; white-space: nowrap; }
+@media (min-width: 761px) and (max-width: 1180px) { .mfilter { gap: 6px; } .mfilter .chip { padding: 10px 9px; font-size: .8rem; } }
+@media (max-width: 760px) { .mfilter .chip { flex: none; padding: 10px 16px; } }
